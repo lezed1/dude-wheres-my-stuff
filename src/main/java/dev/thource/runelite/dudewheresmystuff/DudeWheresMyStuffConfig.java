@@ -15,6 +15,17 @@ public interface DudeWheresMyStuffConfig extends Config {
 
   String CONFIG_GROUP = "dudewheresmystuff";
 
+  @ConfigItem(
+      keyName = "caLevelModifier",
+      name = "CA Level Modifier",
+      description = "Multiple total level by this number",
+      position = 1
+  )
+  default int caLevelModifier()
+  {
+    return 1;
+  }
+
   @ConfigSection(
       name = "Data Export Options",
       description = "Settings for data exports",

@@ -270,6 +270,8 @@ public class DudeWheresMyStuffPlugin extends Plugin {
     overlayManager.add(itemCountOverlay);
     itemCountInputListener.setItemCountOverlay(itemCountOverlay);
     keyManager.registerKeyListener(itemCountInputListener);
+
+    overlayManager.add(new PovertyPVMOverlay(this, config, storageManagerManager, client));
   }
 
   private void reset() {
